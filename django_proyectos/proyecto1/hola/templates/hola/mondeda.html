@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moneda</title>
+        {# Para poder cargar el archivo static se debe poner al principio del archivo load static y para incluirlo en el html en el link se pone el helper de django static y el nombre del archivo #}
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        {% if num == 0 %}
+            <h1>Cara</h1>
+        {% else %}
+            <h1>sello<h1>
+        {% endif %}
+    </body>
+</html>

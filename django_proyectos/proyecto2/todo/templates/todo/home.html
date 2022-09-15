@@ -1,0 +1,13 @@
+{% extends 'todo/layout.html' %}
+{% comment %} Para heredar el codigo de un template se escribe extendes y se pone la ruta de la vista {% endcomment %}
+{% comment %} para poner lo nuevo de esta vista se agrega adentro del block y el nombre que se le puso en el template layout {% endcomment %}
+{% block body %}
+    <h1>Lista de tareas</h1>
+    <ul>
+    {% for tarea in tareas %}
+        <li>{{tarea}}</li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'add' %}">Agregar Tarea</a>
+{% endblock %}
